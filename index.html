@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Address Book</title>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- just using a google font to make stuff look a tiny bit nicer -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- just including some icons to advertise for myself at the bottom of the page -->
+	<link rel='stylesheet' id='fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.5.3' type='text/css' media='all' />
+	<link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<h1>Address Book</h1>
+	<p>A proof-of-concept by David Dales</p>
+
+	<section class="form_section clearfix">
+		<form>
+			<p class="half_width">First name: </p>
+			<p class="half_width">Last name: </p>
+			<input id="first_name" type="text" class="half_width">
+			<input id="last_name" type="text" class="half_width">
+			<p class="half_width">Primary phone: </p>
+			<p class="half_width">Secondary phone (optional): </p>
+			<input id="phone1" type="text" class="half_width">
+			<input id="phone2" type="text" class="half_width">
+			<p class="half_width">Address: </p>
+			<p class="half_width">City: </p>
+			<input id="address" type="text" class="half_width">
+			<input id="city" type="text" class="half_width">
+			<p class="single_lined_info">Postal code: <input id="postal_code" type="text"></p>
+			<p class="single_lined_info">Email: <input id="email" type="text"></p>
+			<p class="single_lined_info">Personal website (optional): <input id="website" type="text"></p>
+			<input type="submit" value="Add">
+			<p id="please_review">*Please fill the boxes with red borders.</p>
+		</form>
+	</section>
+	<section class="multiselect_section clearfix">
+		<p>Sort by: </p>
+		<select id="sorting_categories" name="sorting_categories">
+			<option data-id="0" value=""></option>
+			<option data-id="1" value="first">First name</option>
+			<option data-id="2" value="last">Last name</option>
+			<option data-id="3" value="phone1">Pimary phone number</option>
+			<option data-id="4" value="phone2">Secondary phone number</option>
+			<option data-id="5" value="address">Address</option>
+			<option data-id="6" value="city">City</option>
+			<option data-id="7" value="postal_code">Postal code</option>
+			<option data-id="8" value="email">Email</option>
+			<option data-id="9" value="website">Personal website</option>
+		</select>
+		<select id="people_output" name="addresses" multiple>
+			<!-- to populate with addresses from above -->
+		</select>
+		<a id="delete_selected" href="#">Delete Selected Data</a>
+		<a id="display_selected" href="#">Display Selected Individual(s)</a>
+	</section>
+	<section id="display_individual">
+		
+	</section>
+	<div class="more">
+		<a href="https://twitter.com/d2dev_"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="https://ca.linkedin.com/in/david-dales-62753455"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		<a href="mailto:david.c.dales@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+		<a href="http://www.d2dev.io"><img src="http://www.d2dev.io/favicon.ico" alt="Main page logo"></a>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="build/app.js"></script>
+
+</body>
+</html>
